@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Product Detail</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Trang Chi Tiết Sản Phẩm</h1>
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb">
+            <a href="index.html" class="breadcrumb__link">
+              <i class="fas fa-home"></i>
+              Trang chủ
+            </a>
+            <i class="fas fa-chevron-right breadcrumb__separator"></i>
+            <a href="index.html" class="breadcrumb__link">Sản phẩm</a>
+            <i class="fas fa-chevron-right breadcrumb__separator"></i>
+            <span class="breadcrumb__current">
+              <!-- Đợi JS Render -->
+            </span>
+          </nav>
+        </div>
+
+        <!-- Product Detail -->
+        <div class="product-detail">
+          <!-- Product Images -->
+          <div class="product-images">
+            <!-- Đợi JS Render -->
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-info">
+            <!-- Đợi JS Render -->
+          </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="product-tabs">
+          <!-- Đợi JS Render -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+    </script>
+
+    <!-- Script -->
+    <script type="module" src="./detail-prod.js"></script>
+  </body>
+</html>

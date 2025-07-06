@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Tab List</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Tab List Exercise 1 -->
+      <section class="tab-list-section">
+        <div class="tab-list-container">
+          <div class="tab-list-header">
+            <h2 class="tab-list-title">Điều Hướng Tab</h2>
+            <p class="tab-list-subtitle">
+              Chuyển đổi tab mượt mà với hiệu ứng tương tác
+            </p>
+          </div>
+
+          <div class="tab-list-wrapper" id="tabza1">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+              <button class="tab-btn" data-tab="home">
+                <i class="fas fa-home"></i>
+                <span>Trang Chủ</span>
+              </button>
+              <button class="tab-btn" data-tab="products">
+                <i class="fas fa-box"></i>
+                <span>Sản Phẩm</span>
+              </button>
+              <button class="tab-btn" data-tab="about">
+                <i class="fas fa-info-circle"></i>
+                <span>Giới Thiệu</span>
+              </button>
+              <button class="tab-btn" data-tab="contact">
+                <i class="fas fa-envelope"></i>
+                <span>Liên Hệ</span>
+              </button>
+              <button class="tab-btn" data-tab="settings">
+                <i class="fas fa-cog"></i>
+                <span>Cài Đặt</span>
+              </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <!-- Home Tab -->
+              <div class="tab-panel" id="home">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-home"></i>
+                    Trang chủ
+                  </h3>
+                  <p class="tab-panel-subtitle">
+                    Tổng quan bảng điều khiển của bạn
+                  </p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="content-grid">
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                      </div>
+                      <h4>Phân Tích</h4>
+                      <p>Xem các chỉ số hiệu suất và thông tin chi tiết</p>
+                    </div>
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <h4>Người Dùng</h4>
+                      <p>Quản lý cơ sở người dùng và quyền truy cập</p>
+                    </div>
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-bell"></i>
+                      </div>
+                      <h4>Thông Báo</h4>
+                      <p>Cập nhật với các cảnh báo mới nhất</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Products Tab -->
+              <div class="tab-panel" id="products">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-box"></i>
+                    Sản Phẩm Của Chúng Tôi
+                  </h3>
+                  <p class="tab-panel-subtitle">
+                    Khám phá những sản phẩm tuyệt vời
+                  </p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="product-grid">
+                    <div class="product-card">
+                      <div class="product-image">
+                        <i class="fas fa-laptop"></i>
+                      </div>
+                      <h4>Laptop Pro</h4>
+                      <p>Laptop hiệu suất cao cho chuyên gia</p>
+                      <span class="product-price">29.990.000đ</span>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <i class="fas fa-mobile-alt"></i>
+                      </div>
+                      <h4>SmartPhone X</h4>
+                      <p>
+                        Điện thoại thông minh mới nhất với tính năng tiên tiến
+                      </p>
+                      <span class="product-price">20.990.000đ</span>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-image">
+                        <i class="fas fa-headphones"></i>
+                      </div>
+                      <h4>Tai Nghe Không Dây</h4>
+                      <p>Chất lượng âm thanh cao cấp với chống ồn</p>
+                      <span class="product-price">6.990.000đ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- About Tab -->
+              <div class="tab-panel" id="about">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-info-circle"></i>
+                    Về Chúng Tôi
+                  </h3>
+                  <p class="tab-panel-subtitle">
+                    Tìm hiểu thêm về công ty chúng tôi
+                  </p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="about-content">
+                    <div class="about-image">
+                      <i class="fas fa-building"></i>
+                    </div>
+                    <div class="about-text">
+                      <h4>Câu Chuyện Của Chúng Tôi</h4>
+                      <p>
+                        Chúng tôi là một đội ngũ đam mê, tận tâm tạo ra những
+                        giải pháp sáng tạo mang lại sự khác biệt trong cuộc sống
+                        của mọi người. Được thành lập năm 2020, chúng tôi đã đi
+                        đầu trong việc phát triển công nghệ.
+                      </p>
+
+                      <h4>Sứ Mệnh Của Chúng Tôi</h4>
+                      <p>
+                        Cung cấp các sản phẩm và dịch vụ tiên tiến, trao quyền
+                        cho cá nhân và doanh nghiệp đạt được mục tiêu thông qua
+                        công nghệ.
+                      </p>
+
+                      <h4>Giá Trị Cốt Lõi</h4>
+                      <ul class="values-list">
+                        <li><i class="fas fa-star"></i> Sáng tạo</li>
+                        <li><i class="fas fa-heart"></i> Chất lượng</li>
+                        <li><i class="fas fa-handshake"></i> Chính trực</li>
+                        <li><i class="fas fa-users"></i> Hợp tác</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Tab -->
+              <div class="tab-panel" id="contact">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-envelope"></i>
+                    Liên Hệ Chúng Tôi
+                  </h3>
+                  <p class="tab-panel-subtitle">
+                    Liên lạc với đội ngũ của chúng tôi
+                  </p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="contact-content">
+                    <div class="contact-info">
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h4>Địa Chỉ</h4>
+                          <p>123 Đường Công Nghệ, Quận 1, TP.HCM</p>
+                        </div>
+                      </div>
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h4>Điện Thoại</h4>
+                          <p>+84 28 1234 5678</p>
+                        </div>
+                      </div>
+                      <div class="contact-item">
+                        <div class="contact-icon">
+                          <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                          <h4>Email</h4>
+                          <p>info@congtytech.vn</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-form">
+                      <h4>Gửi tin nhắn cho chúng tôi</h4>
+                      <form class="form">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            placeholder="Họ và tên"
+                            class="form-input"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            placeholder="Email của bạn"
+                            class="form-input"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <textarea
+                            placeholder="Nội dung tin nhắn"
+                            class="form-textarea"
+                            rows="4"
+                          ></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">
+                          <i class="fas fa-paper-plane"></i>
+                          Gửi Tin Nhắn
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Settings Tab -->
+              <div class="tab-panel" id="settings">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-cog"></i>
+                    Cài Đặt
+                  </h3>
+                  <p class="tab-panel-subtitle">
+                    Tùy chỉnh trải nghiệm của bạn
+                  </p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="settings-content">
+                    <div class="settings-group">
+                      <h4>Cài Đặt Tài Khoản</h4>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <h5>Thông Báo Email</h5>
+                          <p>Nhận cập nhật email về tài khoản của bạn</p>
+                        </div>
+                        <label class="toggle-switch">
+                          <input type="checkbox" checked />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <h5>Thông Báo Push</h5>
+                          <p>Nhận thông báo push trên thiết bị</p>
+                        </div>
+                        <label class="toggle-switch">
+                          <input type="checkbox" />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="settings-group">
+                      <h4>Cài Đặt Riêng Tư</h4>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <h5>Hiển Thị Hồ Sơ</h5>
+                          <p>
+                            Cho phép hồ sơ của bạn hiển thị với người dùng khác
+                          </p>
+                        </div>
+                        <label class="toggle-switch">
+                          <input type="checkbox" checked />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                      <div class="setting-item">
+                        <div class="setting-info">
+                          <h5>Thu Thập Dữ Liệu</h5>
+                          <p>Cho phép chúng tôi thu thập dữ liệu sử dụng</p>
+                        </div>
+                        <label class="toggle-switch">
+                          <input type="checkbox" />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab List Exercise 2 (Test Multiple Tab Lists) -->
+      <section class="tab-list-section">
+        <div class="tab-list-container">
+          <div class="tab-list-header">
+            <h2 class="tab-list-title">Tab List Thứ Hai</h2>
+            <p class="tab-list-subtitle">
+              Để test nhiều tab-list hoạt động độc lập
+            </p>
+          </div>
+
+          <div class="tab-list-wrapper" id="tabza2">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+              <button class="tab-btn" data-tab="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </button>
+              <button class="tab-btn" data-tab="analytics">
+                <i class="fas fa-chart-bar"></i>
+                <span>Thống Kê</span>
+              </button>
+              <button class="tab-btn" data-tab="reports">
+                <i class="fas fa-file-alt"></i>
+                <span>Báo Cáo</span>
+              </button>
+              <button class="tab-btn" data-tab="tools">
+                <i class="fas fa-tools"></i>
+                <span>Công Cụ</span>
+              </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <!-- Dashboard Tab -->
+              <div class="tab-panel" id="dashboard">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Bảng Điều Khiển
+                  </h3>
+                  <p class="tab-panel-subtitle">Tổng quan hệ thống</p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="content-grid">
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <h4>Tổng Người Dùng</h4>
+                      <p>1,234 người dùng đang hoạt động</p>
+                    </div>
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <h4>Đơn Hàng</h4>
+                      <p>567 đơn hàng trong tháng này</p>
+                    </div>
+                    <div class="content-card">
+                      <div class="content-card-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                      </div>
+                      <h4>Doanh Thu</h4>
+                      <p>2.5 tỷ VNĐ trong tháng</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Analytics Tab -->
+              <div class="tab-panel" id="analytics">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-chart-bar"></i>
+                    Phân Tích Dữ Liệu
+                  </h3>
+                  <p class="tab-panel-subtitle">Thống kê chi tiết</p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="analytics-content">
+                    <div class="analytics-card">
+                      <h4>Biểu Đồ Tăng Trưởng</h4>
+                      <div class="chart-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Biểu đồ tăng trưởng 30 ngày qua</p>
+                      </div>
+                    </div>
+                    <div class="analytics-card">
+                      <h4>Phân Bố Người Dùng</h4>
+                      <div class="chart-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p>Phân bố theo độ tuổi và khu vực</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reports Tab -->
+              <div class="tab-panel" id="reports">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-file-alt"></i>
+                    Báo Cáo
+                  </h3>
+                  <p class="tab-panel-subtitle">Các báo cáo quan trọng</p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="reports-list">
+                    <div class="report-item">
+                      <div class="report-icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </div>
+                      <div class="report-info">
+                        <h4>Báo Cáo Tháng 12</h4>
+                        <p>Báo cáo tổng kết tháng 12/2024</p>
+                      </div>
+                      <button class="report-btn">Tải Xuống</button>
+                    </div>
+                    <div class="report-item">
+                      <div class="report-icon">
+                        <i class="fas fa-file-excel"></i>
+                      </div>
+                      <div class="report-info">
+                        <h4>Báo Cáo Doanh Thu</h4>
+                        <p>Chi tiết doanh thu theo sản phẩm</p>
+                      </div>
+                      <button class="report-btn">Tải Xuống</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tools Tab -->
+              <div class="tab-panel" id="tools">
+                <div class="tab-panel-header">
+                  <h3 class="tab-panel-title">
+                    <i class="fas fa-tools"></i>
+                    Công Cụ
+                  </h3>
+                  <p class="tab-panel-subtitle">Các công cụ hữu ích</p>
+                </div>
+                <div class="tab-panel-body">
+                  <div class="tools-grid">
+                    <div class="tool-card">
+                      <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                      </div>
+                      <h4>Máy Tính</h4>
+                      <p>Công cụ tính toán nhanh</p>
+                    </div>
+                    <div class="tool-card">
+                      <div class="tool-icon">
+                        <i class="fas fa-calendar"></i>
+                      </div>
+                      <h4>Lịch</h4>
+                      <p>Quản lý lịch trình</p>
+                    </div>
+                    <div class="tool-card">
+                      <div class="tool-icon">
+                        <i class="fas fa-clock"></i>
+                      </div>
+                      <h4>Đồng Hồ</h4>
+                      <p>Thời gian thực</p>
+                    </div>
+                    <div class="tool-card">
+                      <div class="tool-icon">
+                        <i class="fas fa-weather"></i>
+                      </div>
+                      <h4>Thời Tiết</h4>
+                      <p>Dự báo thời tiết</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Script -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+    </script>
+
+    <!-- Tabza -->
+    <script type="module" src="./tabza.js"></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Slider Show</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Slider Show Exercise 1 -->
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slider-header">
+            <h2 class="slider-title">Slider Show Du Lịch</h2>
+            <p class="slider-subtitle">
+              Khám phá những điểm đến tuyệt đẹp trên thế giới
+            </p>
+          </div>
+
+          <div class="slider-wrapper" id="slider-1">
+            <!-- Slider Container -->
+            <div class="slider-container-inner">
+              <div class="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop"
+                      alt="Núi Phú Sĩ"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Núi Phú Sĩ, Nhật Bản</h3>
+                    <p class="slide-description">
+                      Ngọn núi linh thiêng của Nhật Bản với vẻ đẹp hùng vĩ và bí
+                      ẩn
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-map-marker-alt"></i> Nhật Bản</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-calendar"></i> Mùa xuân</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&h=500&fit=crop"
+                      alt="Bãi biển Maldives"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Maldives Paradise</h3>
+                    <p class="slide-description">
+                      Thiên đường biển với nước trong xanh và cát trắng mịn
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-map-marker-alt"></i> Maldives</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-calendar"></i> Quanh năm</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&h=500&fit=crop"
+                      alt="Thành phố Venice"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Venice, Italy</h3>
+                    <p class="slide-description">
+                      Thành phố kênh đào lãng mạn với kiến trúc cổ kính
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-map-marker-alt"></i> Italy</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-calendar"></i> Mùa thu</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop"
+                      alt="Rừng Amazon"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Rừng Amazon</h3>
+                    <p class="slide-description">
+                      Lá phổi xanh của Trái Đất với hệ sinh thái đa dạng
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-map-marker-alt"></i> Brazil</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-calendar"></i> Mùa mưa</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop"
+                      alt="Sa mạc Sahara"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Sa Mạc Sahara</h3>
+                    <p class="slide-description">
+                      Sa mạc lớn nhất thế giới với vẻ đẹp hoang dã
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-map-marker-alt"></i> Châu Phi</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-calendar"></i> Mùa đông</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button
+              class="slider-btn slider-btn--prev"
+              aria-label="Previous slide"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-btn--next" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Dots Navigation -->
+            <div class="slider-dots">
+              <button
+                class="slider-dot active"
+                data-slide="0"
+                aria-label="Go to slide 1"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="1"
+                aria-label="Go to slide 2"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="2"
+                aria-label="Go to slide 3"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="3"
+                aria-label="Go to slide 4"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="4"
+                aria-label="Go to slide 5"
+              ></button>
+            </div>
+
+            <!-- Slide Counter -->
+            <div class="slider-counter">
+              <span class="current-slide">1</span>
+              <span class="total-slides">/ 5</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider Show Exercise 2 -->
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slider-header">
+            <h2 class="slider-title">Slider Show Ẩm Thực</h2>
+            <p class="slider-subtitle">
+              Khám phá những món ăn ngon từ khắp nơi trên thế giới
+            </p>
+          </div>
+
+          <div class="slider-wrapper" id="slider-2">
+            <!-- Slider Container -->
+            <div class="slider-container-inner">
+              <div class="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                  <div class="slide-image">
+                    <img
+                      src="https://media.istockphoto.com/id/1001656546/fr/photo/pizza-napolitaine.webp?a=1&b=1&s=612x612&w=0&k=20&c=yv1FEsKfzHgk4ppZ1hhywe2xPCF5R3XOx6zvk6E2bPg="
+                      alt="Pizza Ý"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Pizza Margherita</h3>
+                    <p class="slide-description">
+                      Món pizza truyền thống của Ý với phô mai mozzarella tươi
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-utensils"></i> Ý</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-star"></i> 4.8/5</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=500&fit=crop"
+                      alt="Sushi Nhật"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Sushi Premium</h3>
+                    <p class="slide-description">
+                      Sushi tươi ngon với cá hồi và các loại hải sản cao cấp
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-utensils"></i> Nhật Bản</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-star"></i> 4.9/5</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=500&fit=crop"
+                      alt="Phở Việt Nam"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Phở Bò Việt Nam</h3>
+                    <p class="slide-description">
+                      Món ăn quốc hồn quốc túy của Việt Nam với nước dùng đậm đà
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-utensils"></i> Việt Nam</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-star"></i> 5.0/5</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=500&fit=crop"
+                      alt="Paella Tây Ban Nha"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Paella Valencia</h3>
+                    <p class="slide-description">
+                      Món cơm hải sản truyền thống của Tây Ban Nha
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-utensils"></i> Tây Ban Nha</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-star"></i> 4.7/5</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide">
+                  <div class="slide-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=500&fit=crop"
+                      alt="Bánh mì Pháp"
+                    />
+                  </div>
+                  <div class="slide-content">
+                    <h3 class="slide-title">Baguette Paris</h3>
+                    <p class="slide-description">
+                      Bánh mì Pháp truyền thống với vỏ giòn và ruột mềm
+                    </p>
+                    <div class="slide-meta">
+                      <span class="slide-location"
+                        ><i class="fas fa-utensils"></i> Pháp</span
+                      >
+                      <span class="slide-season"
+                        ><i class="fas fa-star"></i> 4.6/5</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button
+              class="slider-btn slider-btn--prev"
+              aria-label="Previous slide"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-btn--next" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Dots Navigation -->
+            <div class="slider-dots">
+              <button
+                class="slider-dot active"
+                data-slide="0"
+                aria-label="Go to slide 1"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="1"
+                aria-label="Go to slide 2"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="2"
+                aria-label="Go to slide 3"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="3"
+                aria-label="Go to slide 4"
+              ></button>
+              <button
+                class="slider-dot"
+                data-slide="4"
+                aria-label="Go to slide 5"
+              ></button>
+            </div>
+
+            <!-- Slide Counter -->
+            <div class="slider-counter">
+              <span class="current-slide">1</span>
+              <span class="total-slides">/ 5</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Script -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+    </script>
+  </body>
+</html>

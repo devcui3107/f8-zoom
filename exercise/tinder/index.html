@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Tinder Clone</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="phone-container">
+        <!-- iPhone 16 Pro Max Frame -->
+        <div class="iphone-frame">
+          <!-- Dynamic Island -->
+          <div class="dynamic-island"></div>
+
+          <!-- Screen Content -->
+          <div class="phone-screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+              <div class="status-left">
+                <span class="time">9:41</span>
+              </div>
+              <div class="status-right">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+              </div>
+            </div>
+
+            <!-- Tinder Header -->
+            <div class="tinder-header">
+              <div class="header-left">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="header-center">
+                <div class="tinder-logo">
+                  <i class="fas fa-fire"></i>
+                </div>
+              </div>
+              <div class="header-right">
+                <i class="fas fa-comments"></i>
+              </div>
+            </div>
+
+            <!-- Card Container -->
+            <div class="card-container">
+              <!-- Profile Card 1 -->
+              <div class="profile-card active" data-index="0" draggable="true">
+                <div class="card-image">
+                  <img
+                    src="images/tinder-1.jpg"
+                    alt="Profile"
+                    draggable="false"
+                  />
+                  <div class="card-overlay">
+                    <div class="card-info">
+                      <h2 class="profile-name">Nguyễn Thị Mai, 24</h2>
+                      <p class="profile-bio">
+                        Người yêu phiêu lưu & cà phê ☕️
+                      </p>
+                      <div class="profile-details">
+                        <span class="detail-item"
+                          ><i class="fas fa-map-marker-alt"></i> Cách 2km</span
+                        >
+                        <span class="detail-item"
+                          ><i class="fas fa-graduation-cap"></i> Đại học Mỹ
+                          thuật</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile Card 2 -->
+              <div class="profile-card" data-index="1">
+                <div class="card-image">
+                  <img src="images/tinder-2.jpg" alt="Profile" />
+                  <div class="card-overlay">
+                    <div class="card-info">
+                      <h2 class="profile-name">Trần Thị Hương, 26</h2>
+                      <p class="profile-bio">
+                        Giáo viên yoga & yêu thiên nhiên 🌿
+                      </p>
+                      <div class="profile-details">
+                        <span class="detail-item"
+                          ><i class="fas fa-map-marker-alt"></i> Cách 5km</span
+                        >
+                        <span class="detail-item"
+                          ><i class="fas fa-heart"></i> Thể thao & Sức
+                          khỏe</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile Card 3 -->
+              <div class="profile-card" data-index="2">
+                <div class="card-image">
+                  <img src="images/tinder-3.jpg" alt="Profile" />
+                  <div class="card-overlay">
+                    <div class="card-info">
+                      <h2 class="profile-name">Lê Thị Lan, 23</h2>
+                      <p class="profile-bio">Họa sĩ & mơ mộng 🎨✨</p>
+                      <div class="profile-details">
+                        <span class="detail-item"
+                          ><i class="fas fa-map-marker-alt"></i> Cách 3km</span
+                        >
+                        <span class="detail-item"
+                          ><i class="fas fa-palette"></i> Học viện Mỹ
+                          thuật</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile Card 4 -->
+              <div class="profile-card" data-index="3">
+                <div class="card-image">
+                  <img src="images/tinder-4.jpg" alt="Profile" />
+                  <div class="card-overlay">
+                    <div class="card-info">
+                      <h2 class="profile-name">Phạm Thị Hoa, 25</h2>
+                      <p class="profile-bio">Blogger du lịch & sành ăn 🌍🍕</p>
+                      <div class="profile-details">
+                        <span class="detail-item"
+                          ><i class="fas fa-map-marker-alt"></i> Cách 7km</span
+                        >
+                        <span class="detail-item"
+                          ><i class="fas fa-plane"></i> Digital Nomad</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile Card 5 -->
+              <div class="profile-card" data-index="4">
+                <div class="card-image">
+                  <img src="images/tinder-5.jpg" alt="Profile" />
+                  <div class="card-overlay">
+                    <div class="card-info">
+                      <h2 class="profile-name">Hoàng Thị Nga, 27</h2>
+                      <p class="profile-bio">Yêu công nghệ & mọt sách 📚💻</p>
+                      <div class="profile-details">
+                        <span class="detail-item"
+                          ><i class="fas fa-map-marker-alt"></i> Cách 4km</span
+                        >
+                        <span class="detail-item"
+                          ><i class="fas fa-laptop-code"></i> Kỹ sư phần
+                          mềm</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+              <button class="action-btn undo-btn">
+                <i class="fas fa-undo"></i>
+              </button>
+              <button class="action-btn nope-btn">
+                <i class="fas fa-times"></i>
+              </button>
+              <button class="action-btn super-like-btn">
+                <i class="fas fa-star"></i>
+              </button>
+              <button class="action-btn like-btn">
+                <i class="fas fa-heart"></i>
+              </button>
+              <button class="action-btn boost-btn">
+                <i class="fas fa-bolt"></i>
+              </button>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav">
+              <div class="nav-item active">
+                <i class="fas fa-fire"></i>
+                <span>Discover</span>
+              </div>
+              <div class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Likes</span>
+              </div>
+              <div class="nav-item">
+                <i class="fas fa-comments"></i>
+                <span>Messages</span>
+              </div>
+              <div class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Script -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+    </script>
+  </body>
+</html>

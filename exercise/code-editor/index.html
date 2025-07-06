@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Code Editor</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="code-editor-container">
+        <!-- Editor Header -->
+        <div class="editor-header">
+          <div class="header-left">
+            <h2 class="editor-title">
+              <i class="fas fa-code"></i>
+              Code Editor
+            </h2>
+          </div>
+          <div class="editor-controls">
+            <button class="control-btn" title="Run Code">
+              <i class="fas fa-play"></i>
+              Run
+            </button>
+            <button class="control-btn" title="Clear">
+              <i class="fas fa-trash"></i>
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <!-- Editor Body -->
+        <div class="editor-body">
+          <!-- Code Editor Panel -->
+          <div class="code-panel">
+            <div class="panel-header">
+              <h3>
+                <i class="fas fa-edit"></i>
+                Code Editor
+              </h3>
+            </div>
+            <div class="code-content">
+              <textarea
+                id="codeEditor"
+                placeholder="Nhập code HTML của bạn ở đây..."
+              >
+&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .page-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: #ff5252;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="page-header"&gt;
+        &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+        &lt;p&gt;Đây là trang web demo được tạo bằng HTML và CSS&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;h2&gt;Tính năng chính&lt;/h2&gt;
+        &lt;p&gt;Trang web này có thiết kế responsive và gradient đẹp mắt&lt;/p&gt;
+        &lt;button class="btn"&gt;Click me!&lt;/button&gt;
+        &lt;button class="btn"&gt;Learn More&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea
+              >
+            </div>
+          </div>
+
+          <!-- Preview Panel -->
+          <div class="preview-panel">
+            <div class="panel-header">
+              <h3>
+                <i class="fas fa-eye"></i>
+                Preview
+              </h3>
+              <div class="preview-controls">
+                <button class="preview-btn active" title="Desktop">
+                  <i class="fas fa-desktop"></i>
+                </button>
+                <button class="preview-btn" title="Tablet">
+                  <i class="fas fa-tablet-alt"></i>
+                </button>
+                <button class="preview-btn" title="Mobile">
+                  <i class="fas fa-mobile-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="preview-content">
+              <div class="preview-frame">
+                <div class="preview-header-bar">
+                  <div class="preview-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="preview-url">localhost:3000</div>
+                </div>
+                <div class="preview-body" id="previewBody">
+                  <!-- Preview content will be rendered here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+          <div class="status-left">
+            <span class="status-item">
+              <i class="fas fa-code"></i>
+              HTML Editor
+            </span>
+            <span class="status-item">
+              <i class="fas fa-eye"></i>
+              Live Preview
+            </span>
+          </div>
+          <div class="status-right">
+            <span class="status-item">
+              <i class="fas fa-clock"></i>
+              Auto-update
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+
+      // Code Editor Functionality
+      const codeEditor = document.getElementById("codeEditor");
+      const previewBody = document.getElementById("previewBody");
+      const runBtn = document.querySelector('.control-btn[title="Run Code"]');
+      const clearBtn = document.querySelector('.control-btn[title="Clear"]');
+
+      // Auto-update preview
+      function updatePreview() {
+        const code = codeEditor.value;
+        previewBody.innerHTML = code;
+      }
+
+      // Run code button
+      runBtn.addEventListener("click", updatePreview);
+
+      // Clear button
+      clearBtn.addEventListener("click", () => {
+        codeEditor.value = "";
+        previewBody.innerHTML = "";
+      });
+
+      // Auto-update on input
+      codeEditor.addEventListener("input", updatePreview);
+
+      // Initial preview
+      updatePreview();
+    </script>
+  </body>
+</html>

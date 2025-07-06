@@ -1,0 +1,516 @@
+/* Phone Container */
+.phone-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin: 100px auto;
+}
+
+/* iPhone 16 Pro Max Frame */
+.iphone-frame {
+  width: 393px;
+  height: 852px;
+  background: #000;
+  border-radius: 55px;
+  padding: 8px;
+  box-shadow: 0 0 0 2px #333, 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 6px #1a1a1a,
+    0 0 0 8px #000, 0 0 60px rgba(99, 102, 241, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dynamic Island */
+.dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 0 2px #333;
+}
+
+/* Phone Screen */
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 47px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px 8px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  z-index: 100;
+}
+
+.status-left {
+  font-weight: 600;
+}
+
+.status-right {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.status-right i {
+  font-size: 13px;
+}
+
+/* Tinder Header */
+.tinder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-left,
+.header-right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.header-left:hover,
+.header-right:hover {
+  background: #f8f9fa;
+  color: #ff6b6b;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tinder-logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Card Container */
+.card-container {
+  flex: 1;
+  position: relative;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+/* Profile Card */
+.profile-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  max-height: 532px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+}
+
+.profile-card.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+/* Ẩn hoàn toàn các card không active */
+.profile-card:not(.active) {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.profile-card.active {
+  z-index: 10;
+}
+
+.profile-card:nth-child(2) {
+  transform: scale(0.95) translateY(10px);
+  opacity: 0.7;
+}
+
+.profile-card:nth-child(3) {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0.4;
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #ddd;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Card Overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 30px 20px 20px;
+  color: white;
+}
+
+.card-info {
+  text-align: left;
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Saira", sans-serif; /* primary-2 font */
+}
+
+.profile-bio {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  opacity: 0.9;
+  line-height: 1.4;
+  font-family: "Saira", sans-serif; /* primary-2 font */
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+  font-family: "Saira", sans-serif; /* primary-2 font */
+}
+
+.detail-item i {
+  width: 16px;
+  color: #ff6b6b;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.action-btn {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.undo-btn {
+  background: #fff;
+  color: #666;
+  border: 2px solid #ddd;
+}
+
+.undo-btn:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.nope-btn {
+  background: #fff;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
+  font-size: 18px;
+}
+
+.nope-btn:hover {
+  background: #ff6b6b;
+  color: white;
+  transform: scale(1.1);
+}
+
+.super-like-btn {
+  background: #fff;
+  color: #4ecdc4;
+  border: 2px solid #4ecdc4;
+}
+
+.super-like-btn:hover {
+  background: #4ecdc4;
+  color: white;
+  transform: scale(1.1);
+}
+
+.like-btn {
+  background: #fff;
+  color: #51cf66;
+  border: 2px solid #51cf66;
+}
+
+.like-btn:hover {
+  background: #51cf66;
+  color: white;
+  transform: scale(1.1);
+}
+
+.boost-btn {
+  background: #fff;
+  color: #ffd43b;
+  border: 2px solid #ffd43b;
+}
+
+.boost-btn:hover {
+  background: #ffd43b;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.nav-item i {
+  font-size: 20px;
+  color: #999;
+  transition: all 0.2s ease;
+}
+
+.nav-item span {
+  font-size: 10px;
+  color: #999;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item.active i,
+.nav-item.active span {
+  color: #ff6b6b;
+}
+
+.nav-item:hover {
+  background: #f8f9fa;
+}
+
+.nav-item:hover i,
+.nav-item:hover span {
+  color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .iphone-frame {
+    width: 320px;
+    height: 690px;
+    border-radius: 40px;
+  }
+
+  .phone-screen {
+    border-radius: 32px;
+  }
+
+  .dynamic-island {
+    width: 110px;
+    height: 32px;
+    border-radius: 16px;
+  }
+
+  .profile-card {
+    max-width: 280px;
+    max-height: 420px;
+  }
+
+  .action-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .action-buttons {
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0.5rem;
+  }
+
+  .iphone-frame {
+    width: 280px;
+    height: 600px;
+    border-radius: 35px;
+  }
+
+  .phone-screen {
+    border-radius: 27px;
+  }
+
+  .dynamic-island {
+    width: 100px;
+    height: 28px;
+    border-radius: 14px;
+  }
+
+  .profile-card {
+    max-width: 240px;
+    max-height: 360px;
+  }
+
+  .action-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .profile-bio {
+    font-size: 14px;
+  }
+}
+
+/* Animation for card transitions */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8);
+  }
+}
+
+.profile-card.sliding-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.profile-card.sliding-out {
+  animation: slideOut 0.3s ease-in;
+}
+
+/* Hover effects for better interactivity */
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.nav-item:active {
+  transform: scale(0.95);
+}
+
+/* Custom scrollbar for card container */
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Focus states for accessibility */
+.action-btn:focus,
+.nav-item:focus {
+  outline: 2px solid #ff6b6b;
+  outline-offset: 2px;
+}
