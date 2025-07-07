@@ -41,11 +41,11 @@
           </div>
 
           <div class="slider-wrapper" id="slider-1">
-            <!-- Slider Container -->
-            <div class="slider-container-inner">
-              <div class="slider-track">
+            <!-- Slider Inner -->
+            <div class="slider-inner">
+              <div class="slider-list">
                 <!-- Slide 1 -->
-                <div class="slide active">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop"
@@ -70,7 +70,7 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&h=500&fit=crop"
@@ -94,7 +94,7 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&h=500&fit=crop"
@@ -118,7 +118,7 @@
                 </div>
 
                 <!-- Slide 4 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop"
@@ -142,7 +142,7 @@
                 </div>
 
                 <!-- Slide 5 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop"
@@ -209,8 +209,8 @@
 
             <!-- Slide Counter -->
             <div class="slider-counter">
-              <span class="current-slide">1</span>
-              <span class="total-slides">/ 5</span>
+              <span class="current-slide"></span>
+              <span class="total-slides"></span>
             </div>
           </div>
         </div>
@@ -228,13 +228,13 @@
 
           <div class="slider-wrapper" id="slider-2">
             <!-- Slider Container -->
-            <div class="slider-container-inner">
-              <div class="slider-track">
+            <div class="slider-inner">
+              <div class="slider-list">
                 <!-- Slide 1 -->
-                <div class="slide active">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
-                      src="https://media.istockphoto.com/id/1001656546/fr/photo/pizza-napolitaine.webp?a=1&b=1&s=612x612&w=0&k=20&c=yv1FEsKfzHgk4ppZ1hhywe2xPCF5R3XOx6zvk6E2bPg="
+                      src="https://file.hstatic.net/200000692767/file/pizza-margherita__1_.jpg"
                       alt="Pizza Ý"
                     />
                   </div>
@@ -255,10 +255,10 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
-                      src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=500&fit=crop"
+                      src="https://cdn.dealtoday.vn/img/s800x400/Super-Premium-Omakase-Sushi-Buffet-Dau-Tien-Tai-Viet-Nam-Ichihana-Sushi-9_05042024110548.jpg?sign=3JYWS--5UxAHjEe7B97ETg"
                       alt="Sushi Nhật"
                     />
                   </div>
@@ -279,10 +279,10 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
-                      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=500&fit=crop"
+                      src="https://i0.wp.com/mycogroup.com.vn/wp-content/uploads/2023/05/pho-viet-nam-1.jpg"
                       alt="Phở Việt Nam"
                     />
                   </div>
@@ -303,7 +303,7 @@
                 </div>
 
                 <!-- Slide 4 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
                       src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=500&fit=crop"
@@ -327,10 +327,10 @@
                 </div>
 
                 <!-- Slide 5 -->
-                <div class="slide">
+                <div class="slider-item">
                   <div class="slide-image">
                     <img
-                      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=500&fit=crop"
+                      src="https://cdn.tgdd.vn/2020/10/CookProduct/17-1200x676-1.jpg"
                       alt="Bánh mì Pháp"
                     />
                   </div>
@@ -394,8 +394,8 @@
 
             <!-- Slide Counter -->
             <div class="slider-counter">
-              <span class="current-slide">1</span>
-              <span class="total-slides">/ 5</span>
+              <span class="current-slide"></span>
+              <span class="total-slides"></span>
             </div>
           </div>
         </div>
@@ -412,5 +412,8 @@
       load("#header", "../../template/header.html");
       load("#footer", "../../template/footer.html");
     </script>
+
+    <!-- Slider -->
+    <script type="module" src="./slider.js"></script>
   </body>
 </html>
