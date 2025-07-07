@@ -69,63 +69,7 @@
               <textarea
                 id="codeEditor"
                 placeholder="Nhập code HTML của bạn ở đây..."
-              >
-&lt;!DOCTYPE html&gt;
-&lt;html lang="vi"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;My Website&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .page-header {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        .content {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .btn {
-            background: #ff6b6b;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
-        }
-        .btn:hover {
-            background: #ff5252;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="page-header"&gt;
-        &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
-        &lt;p&gt;Đây là trang web demo được tạo bằng HTML và CSS&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="content"&gt;
-        &lt;h2&gt;Tính năng chính&lt;/h2&gt;
-        &lt;p&gt;Trang web này có thiết kế responsive và gradient đẹp mắt&lt;/p&gt;
-        &lt;button class="btn"&gt;Click me!&lt;/button&gt;
-        &lt;button class="btn"&gt;Learn More&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</textarea
-              >
+              ></textarea>
             </div>
           </div>
 
@@ -158,9 +102,7 @@
                   </div>
                   <div class="preview-url">localhost:3000</div>
                 </div>
-                <div class="preview-body" id="previewBody">
-                  <!-- Preview content will be rendered here -->
-                </div>
+                <div class="preview-body" id="previewBody"></div>
               </div>
             </div>
           </div>
@@ -197,33 +139,9 @@
       // Load header và footer từ template
       load("#header", "../../template/header.html");
       load("#footer", "../../template/footer.html");
-
-      // Code Editor Functionality
-      const codeEditor = document.getElementById("codeEditor");
-      const previewBody = document.getElementById("previewBody");
-      const runBtn = document.querySelector('.control-btn[title="Run Code"]');
-      const clearBtn = document.querySelector('.control-btn[title="Clear"]');
-
-      // Auto-update preview
-      function updatePreview() {
-        const code = codeEditor.value;
-        previewBody.innerHTML = code;
-      }
-
-      // Run code button
-      runBtn.addEventListener("click", updatePreview);
-
-      // Clear button
-      clearBtn.addEventListener("click", () => {
-        codeEditor.value = "";
-        previewBody.innerHTML = "";
-      });
-
-      // Auto-update on input
-      codeEditor.addEventListener("input", updatePreview);
-
-      // Initial preview
-      updatePreview();
     </script>
+
+    <!-- Code Editor Script -->
+    <script type="module" src="./code-editor.js"></script>
   </body>
 </html>

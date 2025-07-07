@@ -133,6 +133,8 @@
   justify-content: center;
   background: #f8f9fa;
   cursor: pointer;
+  overflow: hidden;
+  touch-action: none;
 }
 
 /* Profile Card */
@@ -148,7 +150,14 @@
   transition: all 0.3s ease;
   opacity: 0;
   transform: scale(0.8) translateY(20px);
-  pointer-events: none;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.profile-card:active {
+  cursor: grabbing;
 }
 
 .profile-card.active {
@@ -185,6 +194,7 @@
   height: 100%;
   position: relative;
   background: #ddd;
+  pointer-events: none;
 }
 
 .card-image img {
@@ -192,6 +202,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 /* Card Overlay */
@@ -203,6 +220,8 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   padding: 30px 20px 20px;
   color: white;
+  pointer-events: none;
+  user-select: none;
 }
 
 .card-info {
@@ -254,6 +273,8 @@
   padding: 20px;
   background: #fff;
   border-top: 1px solid #f0f0f0;
+  position: relative;
+  z-index: 100;
 }
 
 .action-btn {
@@ -268,6 +289,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 50;
 }
 
 .undo-btn {
@@ -376,6 +399,34 @@
 .nav-item:hover i,
 .nav-item:hover span {
   color: #ff6b6b;
+}
+
+/* Action Overlay khi swipe - chỉ cho nút X và nút tim */
+.nope-btn.overlay-active {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  z-index: 1000 !important;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4) !important;
+  background: #ff6b6b !important;
+  color: white !important;
+  border-color: #ff6b6b !important;
+}
+
+.like-btn.overlay-active {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+  z-index: 1000 !important;
+  box-shadow: 0 8px 25px rgba(81, 207, 102, 0.4) !important;
+  background: #51cf66 !important;
+  color: white !important;
+  border-color: #51cf66 !important;
+}
+
+/* Các nút khác luôn ở dưới ảnh */
+.undo-btn,
+.super-like-btn,
+.boost-btn {
+  z-index: 50 !important;
 }
 
 /* Responsive Design */
