@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise F8 - Modal</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header sẽ được load từ template -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="todo-container">
+        <!-- Header -->
+        <div class="todo-header">
+          <div class="header-content">
+            <h1 class="todo-title">
+              <i class="fas fa-check-circle"></i>
+              Todo List API
+            </h1>
+            <p class="todo-subtitle">Quản lý công việc thông minh</p>
+          </div>
+          <div class="header-actions">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Tìm kiếm công việc..."
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+            <button id="addTaskBtn" class="header-add-btn">
+              <i class="fas fa-plus"></i>
+              Thêm công việc
+            </button>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="todo-filters">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-list"></i>
+              Tất cả
+            </button>
+            <button class="filter-btn" data-filter="pending">
+              <i class="fas fa-clock"></i>
+              Đang làm
+            </button>
+            <button class="filter-btn" data-filter="completed">
+              <i class="fas fa-check"></i>
+              Hoàn thành
+            </button>
+          </div>
+        </div>
+
+        <!-- Todo List -->
+        <div class="todo-list-container">
+          <div class="todo-grid" id="todoList">
+            <!-- Đợi JS Render -->
+
+            <!-- X -->
+
+            <!-- X -->
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>Chưa có công việc nào</h3>
+            <p>Thêm công việc đầu tiên để bắt đầu!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Task Modal -->
+    <div class="modal-overlay" id="taskModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2 id="modalTitle">Thêm công việc mới</h2>
+          <button class="modal-close" id="closeModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <form class="modal-form" id="taskForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskName">Tên công việc *</label>
+              <input
+                type="text"
+                id="taskName"
+                required
+                placeholder="Nhập tên công việc..."
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskDescription">Mô tả</label>
+              <textarea
+                id="taskDescription"
+                rows="2"
+                placeholder="Mô tả chi tiết công việc..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskCategory">Danh mục</label>
+              <select id="taskCategory">
+                <option value="">Chọn danh mục</option>
+                <option value="work">Công việc</option>
+                <option value="personal">Cá nhân</option>
+                <option value="study">Học tập</option>
+                <option value="health">Sức khỏe</option>
+                <option value="shopping">Mua sắm</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="taskPriority">Mức độ ưu tiên</label>
+              <select id="taskPriority">
+                <option value="low">Thấp</option>
+                <option value="medium" selected>Bình thường</option>
+                <option value="high">Cao</option>
+                <option value="urgent">Khẩn cấp</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskDate">Ngày thực hiện</label>
+              <input type="date" id="taskDate" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskStartTime">Giờ bắt đầu</label>
+              <input type="time" id="taskStartTime" required />
+            </div>
+            <div class="form-group">
+              <label for="taskEndTime">Giờ hoàn thành</label>
+              <input type="time" id="taskEndTime" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taskColor">Màu sắc</label>
+              <div class="color-picker">
+                <input type="color" id="taskColor" value="#667eea" />
+                <div class="color-presets">
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#667eea"
+                    style="background: #667eea"
+                  ></button>
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#10b981"
+                    style="background: #10b981"
+                  ></button>
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#f59e0b"
+                    style="background: #f59e0b"
+                  ></button>
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#ef4444"
+                    style="background: #ef4444"
+                  ></button>
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#8b5cf6"
+                    style="background: #8b5cf6"
+                  ></button>
+                  <button
+                    type="button"
+                    class="color-preset"
+                    data-color="#ec4899"
+                    style="background: #ec4899"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="cancelTask">
+              Hủy
+            </button>
+            <button type="submit" class="btn-primary" id="saveTask">
+              Lưu công việc
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Confirm Delete Modal -->
+    <div class="modal-overlay" id="confirmModal">
+      <div class="modal-container confirm-modal">
+        <div class="modal-header">
+          <h2>Xác nhận xóa</h2>
+          <button class="modal-close" id="closeConfirmModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="confirm-content">
+          <div class="confirm-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>Bạn có chắc muốn xóa công việc này?</h3>
+          <p id="confirmTaskText">
+            Công việc này sẽ bị xóa vĩnh viễn và không thể khôi phục.
+          </p>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" id="cancelDelete">
+            Hủy
+          </button>
+          <button type="button" class="btn-danger" id="confirmDelete">
+            <i class="fas fa-trash"></i>
+            Xóa
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Footer sẽ được load từ template -->
+    <div id="footer"></div>
+
+    <!-- Script -->
+    <script src="../../js/loadComponents.js"></script>
+    <script>
+      // Load header và footer từ template
+      load("#header", "../../template/header.html");
+      load("#footer", "../../template/footer.html");
+    </script>
+
+    <script type="module" src="./todo.js"></script>
+  </body>
+</html>

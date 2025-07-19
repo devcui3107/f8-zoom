@@ -1,0 +1,16 @@
+{
+  "name": "layout-ex-f8",
+  "version": "1.0.0",
+  "description": "Tổng hợp bài tập JavaScript, DOM, và UI tôi đang học theo lộ trình F8.",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server exercise/todo-list-api/db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
